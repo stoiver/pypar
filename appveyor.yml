@@ -25,7 +25,9 @@ build_script:
         "C:\projects\MSMpiSetup.exe")
   - C:\projects\MSMpiSetup.exe -unattend -minimal
   - set PATH=C:\Program Files\Microsoft MPI\Bin;%PATH%
-  - CMD: SET
+  - set
+  - cd C:\Program Files\Microsoft MPI\Bin
+  - dir 
   - conda config --set always_yes yes
   - conda config --add channels conda-forge
   - conda update conda
